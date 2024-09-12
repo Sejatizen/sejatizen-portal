@@ -127,7 +127,7 @@ export default function Home() {
                 <p className="text-[13px] ml-[4.3%] mb-0 text-[#808080]">
                   Member ID :
                 </p>
-                <div className="flex gap-x-12 place-content-end mr-4 items-center">
+                <div className="flex gap-x-12 place-content-end mr-4 items-center select-text">
                   {memberId ? (
                     <>
                       <SearchResult memberId={memberId} />
