@@ -208,41 +208,49 @@ function ProfileForm({ className }: React.ComponentProps<"form">) {
             position="popper"
             className={cn(openSans.className, "bg-[#d9d9d9] text-black h-40")}
           >
-            <SelectItem value="11">Aceh</SelectItem>
-            <SelectItem value="12">Sumatera Utara</SelectItem>
-            <SelectItem value="13">Sumatera Barat</SelectItem>
-            <SelectItem value="16">Sumatera Selatan</SelectItem>
-            <SelectItem value="14">Riau</SelectItem>
-            <SelectItem value="21">Kepulauan Riau</SelectItem>
-            <SelectItem value="15">Jambi</SelectItem>
-            <SelectItem value="17">Bengkulu</SelectItem>
-            <SelectItem value="18">Lampung</SelectItem>
-            <SelectItem value="19">Bangka Belitung</SelectItem>
-            <SelectItem value="31">Jakarta</SelectItem>
-            <SelectItem value="36">Banten</SelectItem>
-            <SelectItem value="32">Jawa Barat</SelectItem>
-            <SelectItem value="33">Jawa Tengah</SelectItem>
-            <SelectItem value="34">Yogyakarta</SelectItem>
-            <SelectItem value="35">Jawa Timur</SelectItem>
-            <SelectItem value="51">Bali</SelectItem>
-            <SelectItem value="61">Kalimantan Barat</SelectItem>
-            <SelectItem value="62">Kalimantan Tengah</SelectItem>
-            <SelectItem value="63">Kalimantan Selatan</SelectItem>
-            <SelectItem value="64">Kalimantan Timur</SelectItem>
-            <SelectItem value="65">Kalimantan Utara</SelectItem>
-            <SelectItem value="52">Nusa Tenggara Barat</SelectItem>
-            <SelectItem value="53">Nusa Tenggara Timur</SelectItem>
-            <SelectItem value="71">Sulawesi Utara</SelectItem>
-            <SelectItem value="72">Sulawesi Tengah</SelectItem>
-            <SelectItem value="73">Sulawesi Selatan</SelectItem>
-            <SelectItem value="74">Sulawesi Tenggara</SelectItem>
-            <SelectItem value="75">Gorontalo</SelectItem>
-            <SelectItem value="76">Sulawesi Barat</SelectItem>
-            <SelectItem value="81">Maluku</SelectItem>
-            <SelectItem value="82">Maluku Utara</SelectItem>
-            <SelectItem value="91">Papua</SelectItem>
-            <SelectItem value="92">Papua Barat</SelectItem>
-            <SelectItem value="00">Lainnya/Luar Indonesia</SelectItem>
+            <SelectItem value="Aceh">Aceh</SelectItem>
+            <SelectItem value="Sumatera Utara">Sumatera Utara</SelectItem>
+            <SelectItem value="Sumatera Barat">Sumatera Barat</SelectItem>
+            <SelectItem value="Sumatera Selatan">Sumatera Selatan</SelectItem>
+            <SelectItem value="Riau">Riau</SelectItem>
+            <SelectItem value="Kepulauan Riau">Kepulauan Riau</SelectItem>
+            <SelectItem value="Jambi">Jambi</SelectItem>
+            <SelectItem value="Bengkulu">Bengkulu</SelectItem>
+            <SelectItem value="Lampung">Lampung</SelectItem>
+            <SelectItem value="Bangka Belitung">Bangka Belitung</SelectItem>
+            <SelectItem value="Jakarta">Jakarta</SelectItem>
+            <SelectItem value="Banten">Banten</SelectItem>
+            <SelectItem value="Jawa Barat">Jawa Barat</SelectItem>
+            <SelectItem value="Jawa Tengah">Jawa Tengah</SelectItem>
+            <SelectItem value="Yogyakarta">Yogyakarta</SelectItem>
+            <SelectItem value="Jawa Timur">Jawa Timur</SelectItem>
+            <SelectItem value="Bali">Bali</SelectItem>
+            <SelectItem value="Kalimantan Barat">Kalimantan Barat</SelectItem>
+            <SelectItem value="Kalimantan Tengah">Kalimantan Tengah</SelectItem>
+            <SelectItem value="Kalimantan Selatan">
+              Kalimantan Selatan
+            </SelectItem>
+            <SelectItem value="Kalimantan Timur">Kalimantan Timur</SelectItem>
+            <SelectItem value="Kalimantan Utara">Kalimantan Utara</SelectItem>
+            <SelectItem value="Nusa Tenggara Barat">
+              Nusa Tenggara Barat
+            </SelectItem>
+            <SelectItem value="Nusa Tenggara Timur">
+              Nusa Tenggara Timur
+            </SelectItem>
+            <SelectItem value="Sulawesi Utara">Sulawesi Utara</SelectItem>
+            <SelectItem value="Sulawesi Tengah">Sulawesi Tengah</SelectItem>
+            <SelectItem value="Sulawesi Selatan">Sulawesi Selatan</SelectItem>
+            <SelectItem value="Sulawesi Tenggara">Sulawesi Tenggara</SelectItem>
+            <SelectItem value="Gorontalo">Gorontalo</SelectItem>
+            <SelectItem value="Sulawesi Barat">Sulawesi Barat</SelectItem>
+            <SelectItem value="Maluku">Maluku</SelectItem>
+            <SelectItem value="Maluku Utara">Maluku Utara</SelectItem>
+            <SelectItem value="Papua">Papua</SelectItem>
+            <SelectItem value="Papua Barat">Papua Barat</SelectItem>
+            <SelectItem value="Lainnya/Luar Indonesia">
+              Lainnya/Luar Indonesia
+            </SelectItem>
           </SelectContent>
         </Select>
       </div>
