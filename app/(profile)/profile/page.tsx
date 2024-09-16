@@ -49,7 +49,7 @@ export default function Profile() {
 
   return (
     <section className="lap:flex tab:block mob:block w-full lap:h-full tab:h-auto mob:h-auto relative box-border inset-x-0 lap:-top-[52%] tab:-top-36 mob:-top-48">
-      <Card className="relative bg-[#0F355A] p-[2%] shadow-[0_6px_20px_0_rgb(0,0,0,0.30)] border-none rounded-[20px] lap:mx-[2%] lap:my-auto lap:h-[96%] lap:w-[25%] tab:mx-auto tab:my-0 tab:h-[60vh] tab:w-[80%] mob:mx-auto mob:my-0 mob:h-[85vh] mob:w-[90%]">
+      <Card className="relative bg-[#0F355A] p-[2%] lap:px-0 shadow-[0_6px_20px_0_rgb(0,0,0,0.30)] border-none rounded-[20px] lap:mx-[2%] lap:my-auto lap:h-[96%] lap:w-[25%] tab:mx-auto tab:my-0 tab:h-[60vh] tab:w-[80%] mob:mx-auto mob:my-0 mob:h-[85vh] mob:w-[90%]">
         <CardHeader className="p-0 space-y-0 flex">
           <a
             className="my-4 lap:mx-auto tab:ml-4 mob:mx-auto h-4"
@@ -64,7 +64,7 @@ export default function Profile() {
           </a>
         </CardHeader>
 
-        <CardContent className="p-0 space-x-0 mx-auto lap:w-[100%] lap:my-14 lap:translate-x-0 lap:translate-y-0 tab:w-[40%] tab:my-28 tab:translate-x-[16vw] tab:-translate-y-[24vh] mob:w-[90%] mob:my-12 mob:translate-x-0 mob:translate-y-0">
+        <CardContent className="p-0 space-x-0 mx-auto lap:w-[100%] lap:my-[25%] lap:translate-x-0 lap:translate-y-0 tab:w-[40%] tab:my-28 tab:translate-x-[16vw] tab:-translate-y-[24vh] mob:w-[90%] mob:my-12 mob:translate-x-0 mob:translate-y-0">
           <Accordion
             className={cn(
               openSans.className,
@@ -74,40 +74,55 @@ export default function Profile() {
             collapsible
           >
             <AccordionItem
-              className="lap:pb-0 tab:pb-4 mob:pb-4 lap:border-none"
+              className="lap:py-1 py-4 lap:border-none"
               value="item-1"
             >
-              <PersonOutlined fontSize="medium" className="translate-y-7" />
-              <AccordionTrigger className="h-4 ml-8 px-3 mb-2 rounded-full text-white text-[12px] hover:no-underline hover:bg-[rgb(183,227,248,0.3)] active:bg-[rgb(183,227,248,0.3)] focus:bg-[rgb(183,227,248,0.3)]">
-                Nama
-              </AccordionTrigger>
-              <AccordionContent className="px-3 ml-8 font-semibold select-text">
+              <div className="flex h-12 lap:hover:bg-[rgb(183,227,248,0.3)] lap:active:bg-[rgb(183,227,248,0.3)] w-full items-center lap:p-4">
+                <PersonOutlined fontSize="medium" />
+                <div className="ml-1 w-full px-3">
+                  <AccordionTrigger className="text-white text-[12px] hover:no-underline">
+                    Nama
+                  </AccordionTrigger>
+                </div>
+              </div>
+
+              <AccordionContent className="lap:px-[11%] mob:px-3 ml-7 my-1 py-2 font-semibold select-text align-middle text-left lap:border-l">
                 {memberName}
               </AccordionContent>
             </AccordionItem>
 
             <AccordionItem
-              className="lap:pb-0 tab:pb-4 mob:pb-4 lap:border-none"
+              className="lap:py-1 py-4 lap:border-none"
               value="item-2"
             >
-              <RoomOutlined fontSize="medium" className="translate-y-7" />
-              <AccordionTrigger className="h-4 ml-8 px-3 mb-2 rounded-full text-white text-[12px] hover:no-underline hover:bg-[rgb(183,227,248,0.3)] active:bg-[rgb(183,227,248,0.3)] focus:bg-[rgb(183,227,248,0.3)]">
-                Asal Daerah
-              </AccordionTrigger>
-              <AccordionContent className="px-3 ml-8 font-semibold select-text">
+              <div className="flex h-12 lap:hover:bg-[rgb(183,227,248,0.3)] lap:active:bg-[rgb(183,227,248,0.3)] w-full items-center lap:p-4">
+                <RoomOutlined fontSize="medium" />
+                <div className="ml-1 w-full px-3">
+                  <AccordionTrigger className="text-white text-[12px] hover:no-underline">
+                    Asal Daerah
+                  </AccordionTrigger>
+                </div>
+              </div>
+
+              <AccordionContent className="lap:px-[11%] mob:px-3 ml-7 my-1 py-2 font-semibold select-text align-middle text-left lap:border-l">
                 {memberRegion}
               </AccordionContent>
             </AccordionItem>
 
             <AccordionItem
-              className="lap:pb-0 tab:pb-4 mob:pb-4 lap:border-none"
+              className="lap:py-1 py-4 lap:border-none"
               value="item-3"
             >
-              <PhoneOutlined fontSize="medium" className="translate-y-7" />
-              <AccordionTrigger className="h-4 ml-8 px-3 mb-2 rounded-full text-white text-[12px] hover:no-underline hover:bg-[rgb(183,227,248,0.3)] active:bg-[rgb(183,227,248,0.3)] focus:bg-[rgb(183,227,248,0.3)]">
-                No. Telepon
-              </AccordionTrigger>
-              <AccordionContent className="px-3 ml-8 font-semibold select-text">
+              <div className="flex h-12 lap:hover:bg-[rgb(183,227,248,0.3)] lap:active:bg-[rgb(183,227,248,0.3)] w-full items-center lap:p-4">
+                <PhoneOutlined fontSize="medium" />
+                <div className="ml-1 w-full px-3">
+                  <AccordionTrigger className="text-white text-[12px] hover:no-underline">
+                    No. Telepon
+                  </AccordionTrigger>
+                </div>
+              </div>
+
+              <AccordionContent className="lap:px-[11%] mob:px-3 ml-7 my-1 py-2 font-semibold select-text align-middle text-left lap:border-l">
                 {memberPhone}
               </AccordionContent>
             </AccordionItem>

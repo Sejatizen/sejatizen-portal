@@ -20,7 +20,7 @@ import localFont from "next/font/local";
 import axios from "axios";
 
 // Fonts
-const montserrat = FontSans({
+const Montserrat = FontSans({
   subsets: ["latin"],
   variable: "--font-sans",
 });
@@ -110,7 +110,7 @@ export default function Home() {
         <CardHeader className="p-0 space-y-0">
           <CardTitle
             className={cn(
-              montserrat.className,
+              Montserrat.className,
               "lap:ml-[2%] tab:ml-[5%] lap:mt-2 tab:mt-8 mob:mt-10 text-2xl text-white font-normal lap:text-left tab:text-left mob:text-center cursor-default"
             )}
           >

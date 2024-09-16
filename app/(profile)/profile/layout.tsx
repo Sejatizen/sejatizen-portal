@@ -56,7 +56,7 @@ export default function RootLayout({
       <div
         className={cn(
           openSans.className,
-          "absolute cursor-default mx-10 mb-5 inset-x-0 lap:bottom-0 tab:-bottom-[90vh] mob:-bottom-[190vh] text-white font-normal text-[10px] text-center"
+          "absolute cursor-default mx-10 mb-5 inset-x-0 lap:bottom-0 tab:-bottom-full mob:-bottom-[190vh] text-white font-normal text-[10px] text-center"
         )}
       >
         Copyright &copy; <span id="copyright">{year} </span> mcsejatiteam All

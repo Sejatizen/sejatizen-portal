@@ -26,7 +26,7 @@ import axios from "axios";
 // ELEMENT
 
 // font
-const montserrat = FontSans({
+const Montserrat = FontSans({
   subsets: ["latin"],
   variable: "--font-sans",
 });
@@ -151,7 +151,7 @@ export const Modal = ({ isModalOpen, closeModal, onComplete }: ModalProps) => {
         <DialogHeader className="-mb-8">
           <DialogTitle
             className={cn(
-              montserrat.className,
+              Montserrat.className,
               "text-white text-center text-[20px] font-normal mb-0"
             )}
           >
@@ -162,17 +162,19 @@ export const Modal = ({ isModalOpen, closeModal, onComplete }: ModalProps) => {
           </DialogDescription>
         </DialogHeader>
 
-        <InputOTP maxLength={4} autoFocus onComplete={onComplete}>
+        <InputOTP maxLength={6} autoFocus onComplete={onComplete}>
           <InputOTPGroup>
             <InputOTPSlot index={0} />
             <InputOTPSlot index={1} />
+            <InputOTPSlot index={2} />
           </InputOTPGroup>
 
           <InputOTPSeparator />
 
           <InputOTPGroup>
-            <InputOTPSlot index={2} />
             <InputOTPSlot index={3} />
+            <InputOTPSlot index={4} />
+            <InputOTPSlot index={5} />
           </InputOTPGroup>
         </InputOTP>
       </DialogContent>
@@ -235,7 +237,7 @@ const MemberIDComponent = () => {
           <CardHeader className="p-0 space-y-0 lap:mt-0 tab:mt-14 mob:mt-14 lap:mb-[1px] tab:mb-6 mob:mb-4">
             <CardTitle
               className={cn(
-                montserrat.className,
+                Montserrat.className,
                 "text-2xl text-white font-normal text-center cursor-default"
               )}
             >
