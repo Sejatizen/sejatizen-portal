@@ -17,11 +17,14 @@ import {
 } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
+import { Alert, AlertDescription } from "@/components/ui/alert";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Montserrat as FontSans } from "next/font/google";
 import { Roboto } from "next/font/google";
 import localFont from "next/font/local";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import axios from "axios";
+import { title } from "process";
+import { CircleX, Info, TriangleAlert } from "lucide-react";
 
 // ELEMENT
 
@@ -187,6 +190,12 @@ const MemberIDComponent = () => {
   const [inputValue, setInputValue] = useState("");
   const [isModalOpen, setModalOpen] = useState(false);
   const [isButtonActive, setButtonActive] = useState(false);
+  const [alertMessage, setAlertMessage] = useState<string | null>(null);
+  const [alertType, setAlertType] = useState<
+    "error" | "warning" | "info" | null
+  >(null);
+  const [timeoutId, setTimeoutId] = useState<NodeJS.Timeout | null>(null);
+  const [isFadingOut, setIsFadingOut] = useState(false);
   const inputField = inputValue.trim();
 
   async function handleSubmit() {
@@ -202,20 +211,47 @@ const MemberIDComponent = () => {
       });
   }
 
+  // sistem alert
+  const showAlert = (message: string, type: "error" | "warning" | "info") => {
+    if (timeoutId) {
+      clearTimeout(timeoutId);
+    }
+
+    setAlertMessage(message);
+    setAlertType(type);
+    setIsFadingOut(false);
+
+    // Set timeout baru untuk menghilangkan alert
+    const newTimeoutId = setTimeout(() => {
+      setIsFadingOut(true);
+      setTimeout(() => {
+        setAlertMessage(null);
+        setAlertType(null);
+      }, 500);
+    }, 3000);
+
+    setTimeoutId(newTimeoutId);
+  };
+
+  // sistem validasi input
   const checkAndCleanInput = useCallback(() => {
     const regex = /^[a-z]{1}[0-9]{2}[a-z]{2}[0-9]{3}$/;
 
     if (inputField === "") {
-      alert("Input tidak boleh kosong.");
+      showAlert("Input tidak boleh kosong.", "error");
       return false;
     }
 
     if (!regex.test(inputField)) {
-      alert("Format tidak sesuai. Contoh format yang benar: a00aa000");
+      showAlert(
+        "Format tidak sesuai. Contoh format yang benar: a00aa000",
+        "warning"
+      );
       setInputValue(""); // Mengosongkan input jika format tidak valid
       return false;
     }
 
+    showAlert("", "info");
     openModal();
 
     return false;
@@ -233,6 +269,32 @@ const MemberIDComponent = () => {
   return (
     <>
       <div className="flex flex-col justify-center h-[100%] lap:gap-y-3 lap:w-[27%] tab:w-[100%] mob:w-[100%]">
+        {alertMessage && (
+          <Alert
+            className={cn(
+              "lap:absolute fixed flex z-10 lap:-bottom-16 lap:left-[23%] tab:left-[25%] mob:left-[10%] lap:top-[104%] top-4 mx-auto lap:w-[55%] tab:w-[50%] mob:w-[80%] items-center text-white rounded-[10px] space-y-0 pb-3",
+              alertType === "error" &&
+                "bg-red-500/50 border-none backdrop-blur",
+              alertType === "warning" &&
+                "bg-yellow-500/50 border-none backdrop-blur",
+              alertType === "info" &&
+                "bg-blue-500/50 border-none backdrop-blur",
+              "transition-opacity duration-500",
+              !isFadingOut
+                ? "lap:animate-fadeIn tab:animate-fadeInReverse mob:animate-fadeInReverse"
+                : "lap:animate-fadeOut tab:animate-fadeOutReverse mob:animate-fadeOutReverse"
+            )}
+            variant="default"
+          >
+            {alertType === "error" && <CircleX className="w-4 h-4" />}
+            {alertType === "warning" && <TriangleAlert className="w-4 h-4" />}
+            {alertType === "info" && <Info className="w-4 h-4" />}
+            <AlertDescription className="text-sm font-normal align-middle ml-4">
+              {alertMessage}
+            </AlertDescription>
+          </Alert>
+        )}
+
         <Card className="lap:p-8 tab:p-0 mob:p-0 lap:px-[10%] tab:px-[auto] mob:px-[auto] shadow-[0_6px_20px_0_rgb(0,0,0,0.30)] justify-center rounded-[20px] bg-[#0F355A] border-none text-white lap:h-[80%] tab:h-[70vh] mob:h-[70vh]">
           <CardHeader className="p-0 space-y-0 lap:mt-0 tab:mt-14 mob:mt-14 lap:mb-[1px] tab:mb-6 mob:mb-4">
             <CardTitle

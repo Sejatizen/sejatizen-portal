@@ -29,6 +29,17 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+  AlertDialogTrigger,
+} from "@/components/ui/alert-dialog";
 import { Montserrat as FontSans } from "next/font/google";
 import { Roboto } from "next/font/google";
 import localFont from "next/font/local";
@@ -36,7 +47,7 @@ import localFont from "next/font/local";
 // ELEMENT
 
 // font
-const montserrat = FontSans({
+const Montserrat = FontSans({
   subsets: ["latin"],
   variable: "--font-sans",
 });
@@ -55,7 +66,7 @@ const openSans = localFont({
 // SYSTEM
 
 // member data
-const memberName = "Josh";
+const memberName = "Sejatizen";
 const memberRegion = "Jawa Barat";
 const memberPhone = "+621234567890";
 
@@ -106,7 +117,7 @@ export function DrawerDialogDemo() {
           <DialogHeader>
             <DialogTitle
               className={cn(
-                montserrat.className,
+                Montserrat.className,
                 "text-white text-[20px] font-normal"
               )}
             >
@@ -143,7 +154,7 @@ export function DrawerDialogDemo() {
         <DrawerHeader className="text-left">
           <DrawerTitle
             className={cn(
-              montserrat.className,
+              Montserrat.className,
               "text-white text-[20px] font-normal"
             )}
           >
@@ -269,6 +280,7 @@ function ProfileForm({ className }: React.ComponentProps<"form">) {
         />
       </div>
 
+      {/* pasang alert dialog */}
       <Button
         className="text-[#112233] bg-[#d9d9d9] mt-8 active:scale-[0.99]"
         type="submit"
