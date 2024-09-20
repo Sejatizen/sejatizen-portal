@@ -333,7 +333,7 @@ function ProfileForm({
       {alertMessage && (
         <Alert
           className={cn(
-            "lap:absolute fixed flex z-10 lap:-bottom-[116px] lap:-left-[4%] tab:left-[0%] mob:left-[10%] lap:top-[118%] tab:-top-[116px] mob:-top-[195px] mx-auto lap:w-[110%] tab:w-[100%] mob:w-[80%] items-center text-white rounded-[10px] space-y-0 pb-3",
+            "lap:absolute fixed flex z-10 lap:-bottom-[116px] lap:-left-[4%] tab:left-[0%] mob:left-[10%] lap:top-[118%] tab:-top-[116px] mob:-top-[186px] mx-auto lap:w-[110%] tab:w-[100%] mob:w-[80%] items-center text-white rounded-[10px] space-y-0 pb-3",
             alertType === "error" && "bg-red-500/50 border-none backdrop-blur",
             alertType === "warning" &&
               "bg-yellow-500/50 border-none backdrop-blur",
