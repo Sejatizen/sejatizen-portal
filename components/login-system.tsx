@@ -122,7 +122,7 @@ export const LoginButton = ({
     <Button
       className={cn(
         roboto.className,
-        "shrink lap:shadow-[0_6px_20px_0_rgb(0,0,0,0.30)] tab:shadow-none mob:shadow-none rounded-[20px] lap:h-[18%] tab:h-[9vh] mob:h-[10vh] bg-[#3C739D] text-[#000123] hover:text-white hover:bg-[rgb(60,115,157,0.5)] active:text-white active:bg-[rgba(60,115,157,0.7)] lap:w-full tab:w-[60%] mob:w-[80%] lap:mx-0 tab:mx-auto mob:mx-auto lap:translate-y-0 tab:-translate-y-[15vh] mob:-translate-y-[15vh]",
+        "shrink lap:shadow-[0_6px_20px_0_rgb(0,0,0,0.30)] tab:shadow-none mob:shadow-none rounded-[20px] lap:h-[18%] tab:h-14 mob:h-14 bg-[#3C739D] text-[#000123] hover:text-white hover:bg-[rgb(60,115,157,0.5)] active:text-white active:bg-[rgba(60,115,157,0.7)] lap:w-full tab:w-[60%] mob:w-[80%] lap:mx-0 tab:mx-auto mob:mx-auto lap:translate-y-0 tab:-translate-y-24 mob:-translate-y-24",
         isActive ? "bg-[rgba(60,115,157,0.7)] text-white" : ""
       )}
       id="login"
@@ -148,7 +148,7 @@ export const Modal = ({ isModalOpen, closeModal, onComplete }: ModalProps) => {
       <DialogContent
         className={cn(
           openSans.className,
-          "max-w-[425px] gap-y-0 space-y-0 rounded-md h-[35vh] mx-auto bg-[#112233] border-none"
+          "max-w-[425px] gap-y-0 space-y-0 rounded-md h-52 mx-auto bg-[#112233] border-none"
         )}
       >
         <DialogHeader className="-mb-8">
@@ -295,7 +295,7 @@ const MemberIDComponent = () => {
           </Alert>
         )}
 
-        <Card className="lap:p-8 tab:p-0 mob:p-0 lap:px-[10%] tab:px-[auto] mob:px-[auto] shadow-[0_6px_20px_0_rgb(0,0,0,0.30)] justify-center rounded-[20px] bg-[#0F355A] border-none text-white lap:h-[80%] tab:h-[70vh] mob:h-[70vh]">
+        <Card className="lap:p-8 tab:p-0 mob:p-0 lap:px-[10%] tab:px-[auto] mob:px-[auto] shadow-[0_6px_20px_0_rgb(0,0,0,0.30)] justify-center rounded-[20px] bg-[#0F355A] border-none text-white lap:h-[80%] tab:h-auto tab:pb-40 mob:h-auto mob:pb-40">
           <CardHeader className="p-0 space-y-0 lap:mt-0 tab:mt-14 mob:mt-14 lap:mb-[1px] tab:mb-6 mob:mb-4">
             <CardTitle
               className={cn(
@@ -321,7 +321,7 @@ const MemberIDComponent = () => {
                 checkAndCleanInput={checkAndCleanInput}
                 setButtonActive={setButtonActive}
               />
-              <p className="lap:mt-[25%] tab:mt-[20%] mob:mt-[20%] lap:mx-0 tab:mx-[12%] mob:mx-[18%] text-[14px] text-center">
+              <p className="lap:mt-[25%] tab:mt-[10%] mob:mt-[10%] lap:mx-0 tab:mx-[12%] mob:mx-[18%] text-[14px] text-center">
                 Belum memiliki Member ID?{" "}
                 <a
                   className="uk-text-decoration-none uk-button-text text-[#00FFD1] hover:text-[#5494c5] hover:duration-500"

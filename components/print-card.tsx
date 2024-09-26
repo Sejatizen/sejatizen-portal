@@ -214,7 +214,7 @@ const PrintButton = ({
                 />
               </rect>
             </g>
-            <g transform="rotate(30 50 50)">
+            <g transform="rotate(45 50 50)">
               <rect
                 fill="#ffffff"
                 height="12"
@@ -234,7 +234,7 @@ const PrintButton = ({
                 />
               </rect>
             </g>
-            <g transform="rotate(60 50 50)">
+            <g transform="rotate(90 50 50)">
               <rect
                 fill="#ffffff"
                 height="12"
@@ -254,7 +254,7 @@ const PrintButton = ({
                 />
               </rect>
             </g>
-            <g transform="rotate(90 50 50)">
+            <g transform="rotate(135 50 50)">
               <rect
                 fill="#ffffff"
                 height="12"
@@ -274,7 +274,7 @@ const PrintButton = ({
                 />
               </rect>
             </g>
-            <g transform="rotate(120 50 50)">
+            <g transform="rotate(180 50 50)">
               <rect
                 fill="#ffffff"
                 height="12"
@@ -294,7 +294,7 @@ const PrintButton = ({
                 />
               </rect>
             </g>
-            <g transform="rotate(150 50 50)">
+            <g transform="rotate(225 50 50)">
               <rect
                 fill="#ffffff"
                 height="12"
@@ -314,7 +314,7 @@ const PrintButton = ({
                 />
               </rect>
             </g>
-            <g transform="rotate(180 50 50)">
+            <g transform="rotate(270 50 50)">
               <rect
                 fill="#ffffff"
                 height="12"
@@ -334,7 +334,7 @@ const PrintButton = ({
                 />
               </rect>
             </g>
-            <g transform="rotate(210 50 50)">
+            <g transform="rotate(315 50 50)">
               <rect
                 fill="#ffffff"
                 height="12"

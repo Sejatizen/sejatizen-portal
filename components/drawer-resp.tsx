@@ -294,7 +294,8 @@ function ProfileForm({
   }, []);
 
   // sistem deteksi perubahan
-  const handleChange = () => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
     if (
       name === initialValues.name &&
       region === initialValues.region &&
@@ -333,7 +334,7 @@ function ProfileForm({
       {alertMessage && (
         <Alert
           className={cn(
-            "lap:absolute fixed flex z-10 lap:-bottom-[116px] lap:-left-[4%] tab:left-[0%] mob:left-[10%] lap:top-[118%] tab:-top-[116px] mob:-top-[186px] mx-auto lap:w-[110%] tab:w-[100%] mob:w-[80%] items-center text-white rounded-[10px] space-y-0 pb-3",
+            "lap:absolute fixed flex z-10 lap:-bottom-[116px] lap:-left-[4%] tab:left-[0%] mob:left-[10%] lap:top-[118%] tab:-top-[116px] mob:-top-[194px] mx-auto lap:w-[110%] tab:w-[100%] mob:w-[80%] items-center text-white rounded-[10px] space-y-0 pb-3",
             alertType === "error" && "bg-red-500/50 border-none backdrop-blur",
             alertType === "warning" &&
               "bg-yellow-500/50 border-none backdrop-blur",
@@ -354,7 +355,7 @@ function ProfileForm({
         </Alert>
       )}
 
-      <form className={className}>
+      <form className={className} onSubmit={handleSubmit}>
         <div className="grid gap-1">
           <label className="text-[14px] text-white" htmlFor="name">
             Nama :
@@ -445,20 +446,21 @@ function ProfileForm({
             ref={phoneInputRef}
             className="h-8 px-4 mx-4 text-[#d9d9d9] outline-none bg-transparent border-b border-inherit focus:border-b-2"
             id="phone"
-            pattern="\+[0-9]+"
+            pattern="^\+[0-9]{10,15}$"
+            maxLength={20}
             defaultValue={memberPhone}
             required
             onChange={(e) => setPhone(e.target.value)}
           />
         </div>
-      </form>
 
-      <Button
-        onClick={handleChange}
-        className="text-[#112233] bg-[#d9d9d9] mx-4 mt-8 active:scale-[0.99]"
-      >
-        Save changes
-      </Button>
+        <Button
+          type="submit"
+          className="text-[#112233] bg-[#d9d9d9] w-full mt-8 active:scale-[0.99]"
+        >
+          Save changes
+        </Button>
+      </form>
     </div>
   );
 }

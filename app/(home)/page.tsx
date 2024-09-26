@@ -106,7 +106,7 @@ export default function Home() {
       )}
     >
       {/* Search */}
-      <Card className="p-[3%] shrink shadow-[0_6px_20px_0_rgb(0,0,0,0.30)] rounded-[20px] text-white lap:w-[75%] lap:h-[100%] bg-[#0F355A] border-none tab:w-[100%] tab:h-[65vh] tab:pb-6 mob:w-[100%] mob:h-[70vh] mob:pb-8">
+      <Card className="p-[3%] shrink shadow-[0_6px_20px_0_rgb(0,0,0,0.30)] rounded-[20px] text-white lap:w-[75%] lap:h-[100%] bg-[#0F355A] border-none tab:w-[100%] tab:h-auto tab:pb-6 mob:w-[100%] mob:h-auto mob:pb-6">
         <CardHeader className="p-0 space-y-0">
           <CardTitle
             className={cn(
@@ -119,11 +119,11 @@ export default function Home() {
         </CardHeader>
 
         <CardContent>
-          <div className="mt-6 lap:mx-[10%] tab:mx-[14%] mob:mx-[3%] lap:mb-10 tab:mb-12 mob:mb-16">
+          <div className="mt-6 lap:mx-[10%] tab:mx-[14%] mob:mx-[3%]">
             <div className="grid w-full items-center gap-y-6">
               <SearchInput onSearch={handleSearch} />
 
-              <div className="w-full lap:h-[14vh] tab:h-[14vh] mob:h-[15vh] p-[3%] rounded-[20px] bg-[#D9D9D9]">
+              <div className="w-full h-22 p-[3%] rounded-[20px] bg-[#D9D9D9]">
                 <p className="text-[13px] ml-[4.3%] mb-0 text-[#808080]">
                   Member ID :
                 </p>
@@ -144,7 +144,7 @@ export default function Home() {
             </div>
           </div>
 
-          <p className="text-[14px] text-center">
+          <p className="text-[14px] text-center mt-[5vh] pb-[8%]">
             Tidak menemukan Member ID?{" "}
             <span
               className="uk-text-decoration-none uk-button-text cursor-pointer text-[#00FFD1] hover:text-[#5494c5] hover:duration-500"

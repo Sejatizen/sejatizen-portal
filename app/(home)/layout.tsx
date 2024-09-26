@@ -34,8 +34,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <main className="lap:h-screen tab:min-h-screen mob:min-h-screen bg-[#123] antialiased no-scrollbar scrollbar-hide select-none">
-      <div className="flex lap:h-[52vh] -z-[1] justify-center bg-[url('/banner.jpg')] bg-top lap:bg-cover lap:pt-[3%] rounded-b-[20%] tab:bg-auto tab:pt-[4%] tab:h-[55vh] mob:bg-auto mob:h-[65vh] mob:pt-[5%]">
+    <main className="lap:h-screen tab:h-auto mob:h-auto bg-[#123] antialiased no-scrollbar scrollbar-hide select-none">
+      <div className="flex lap:h-[52vh] -z-[1] justify-center bg-[url('/banner.jpg')] bg-top lap:bg-cover lap:pt-[3%] rounded-b-[20%] tab:bg-auto tab:pt-[4%] tab:h-[30vh] mob:bg-auto mob:h-[40vh] mob:pt-[5%]">
         <a className="mx-auto h-4" href="https://mcsejati.site">
           <Image
             src={"/mcsejati-word-logo.png"}
@@ -49,7 +49,7 @@ export default function RootLayout({
       <div
         className={cn(
           openSans.className,
-          "absolute cursor-default mx-10 mb-5 inset-x-0 lap:bottom-0 tab:-bottom-full mob:-bottom-full text-white font-normal text-[10px] text-center"
+          "absolute cursor-default mx-10 mb-5 inset-x-0 lap:bottom-0 tab:-bottom-40 mob:-bottom-96 text-white font-normal text-[10px] text-center"
         )}
       >
         Copyright &copy; <span id="copyright">{year} </span> mcsejatiteam All
